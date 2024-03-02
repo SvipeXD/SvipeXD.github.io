@@ -1,0 +1,54 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .floating-message {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: fadeInOut 3s ease-in-out forwards;
+  }
+  
+  .success-message {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .error-message {
+    background-color: #FF5733;
+    color: white;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Solicitud de EPP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Seleccione su rol</h1>
+    <div class="buttons">
+      <button onclick="showWorkerForm()">Trabajador</button>
+      <button onclick="showAdminLogin()">Administrador</button>
+    </div>
+    <div id="workerForm" class="form-container hidden">
+      <h2>Formulario de Trabajador</h2>
+      <form id="workerForm">
+        <input type="text" id="workerNombre" name="nombre" placeholder="Nombre"><br>
+        <input type="text" id="eppSolicitado" name="eppSolicitado" placeholder="EPP Solicitado"><br>
+        <input type="text" id="talla" name="talla" placeholder="Talla"><br>
+        <input type="text" id="razonSolicitud" name="razonSolicitud" placeholder="Razón de la solicitud"><br>
+        <input type="file" id="fotoEPP" name="fotoEPP"><br>
+        <input type="submit" value="Enviar" onclick="showSuccessMessage()">
+      </form>
+    </div>
+    <div id="adminLogin" class="form-container hidden">
+      <h2>Inicio de Sesión de Administrador</h2>
+      <form id="adminLoginForm" onsubmit="loginAdmin()">
+        <input type="text" id="username" name="usuario" placeholder="Usuario"><br>
+        <input type="password" id="password" name="contraseña" placeholder="Contraseña"><br>
+        <input type="submit" value="Iniciar Sesión">
+      </form>
+    </div>
+    <div id="adminPanel" class="hidden">
+      <h2>Panel de Administrador</h2>
+      <div id="solicitudContainer">
+        <!-- Aquí se mostrarán las solicitudes de los trabajadores -->
+      </div>
+    </div>
+    <div id="floatingMessage" class="floating-message hidden"></div>
+    <div id="adminMessage" class="admin-message hidden"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
